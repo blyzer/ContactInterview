@@ -16,7 +16,7 @@ namespace ContactInterview.Application.IntegrationTests.TodoItems.Commands
         [Test]
         public void ShouldRequireMinimumFields()
         {
-            var command = new CreateTodoItemCommand();
+            var command = new CreateCustomerCommand();
 
             FluentActions.Invoking(() =>
                 SendAsync(command)).Should().Throw<ValidationException>();
@@ -32,7 +32,7 @@ namespace ContactInterview.Application.IntegrationTests.TodoItems.Commands
                 Title = "New List"
             });
 
-            var command = new CreateTodoItemCommand
+            var command = new CreateCustomerCommand
             {
                 ListId = listId,
                 Title = "Tasks"

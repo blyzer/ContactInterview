@@ -37,7 +37,7 @@ namespace ContactInterview.Application.IntegrationTests.TodoItems.Commands
                 Title = "New List"
             });
 
-            var itemId = await SendAsync(new CreateTodoItemCommand
+            var itemId = await SendAsync(new CreateCustomerCommand
             {
                 ListId = listId,
                 Title = "New Item"

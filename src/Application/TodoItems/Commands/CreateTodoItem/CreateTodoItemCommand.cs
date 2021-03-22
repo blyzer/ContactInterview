@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace ContactInterview.Application.TodoItems.Commands.CreateTodoItem
 {
-    public class CreateTodoItemCommand : IRequest<int>
+    public class CreateCustomerCommand : IRequest<int>
     {
         public int ListId { get; set; }
 
         public string Title { get; set; }
     }
 
-    public class CreateTodoItemCommandHandler : IRequestHandler<CreateTodoItemCommand, int>
+    public class CreateTodoItemCommandHandler : IRequestHandler<CreateCustomerCommand, int>
     {
         private readonly IApplicationDbContext _context;
 
@@ -23,7 +23,7 @@ namespace ContactInterview.Application.TodoItems.Commands.CreateTodoItem
             _context = context;
         }
 
-        public async Task<int> Handle(CreateTodoItemCommand request, CancellationToken cancellationToken)
+        public async Task<int> Handle(CreateCustomerCommand request, CancellationToken cancellationToken)
         {
             var entity = new TodoItem
             {

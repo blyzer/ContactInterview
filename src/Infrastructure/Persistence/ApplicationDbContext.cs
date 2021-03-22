@@ -34,6 +34,11 @@ namespace ContactInterview.Infrastructure.Persistence
         public DbSet<TodoItem> TodoItems { get; set; }
 
         public DbSet<TodoList> TodoLists { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Address> addresses { get; set; }
+        public DbSet<ContactType> ContactTypes { get; set; }
+
+        public DbSet<ContactInformation> ContactInformations { get; set; }
 
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {

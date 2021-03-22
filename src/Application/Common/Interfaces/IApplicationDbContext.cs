@@ -11,6 +11,12 @@ namespace ContactInterview.Application.Common.Interfaces
 
         DbSet<TodoItem> TodoItems { get; set; }
 
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Address> addresses { get; set; }
+        public DbSet<ContactType> ContactTypes { get; set; }
+
+        public DbSet<ContactInformation> ContactInformations { get; set; }
+
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
     }
 }
