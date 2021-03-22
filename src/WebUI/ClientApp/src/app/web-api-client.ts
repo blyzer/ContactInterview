@@ -1242,8 +1242,7 @@ export class TodoItemDto implements ITodoItemDto {
     title?: string | undefined;
     done?: boolean;
     priority?: number;
-
-   note?: string | undefined;
+    note?: string | undefined;
 
     constructor(data?: ITodoItemDto) {
         if (data) {
