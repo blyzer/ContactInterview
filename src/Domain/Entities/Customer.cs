@@ -24,15 +24,6 @@ namespace ContactInterview.Domain.Entities
         public string Suffix { get; set; }
 
         [Required]
-        public int GenderId { get; set; }
-
-        [Required]
-        public int MaritalStatusId { get; set; }
-
-        [Required]
-        public int IdentificationTypeId { get; set; }
-
-        [Required]
         public string IdNumber { get; set; }
 
         public virtual Gender Gender { get; set; }
@@ -42,17 +33,9 @@ namespace ContactInterview.Domain.Entities
         public virtual IEnumerable<ContactInformation> ContactInformations { get; set; }
 
         public virtual IEnumerable<Address> Addresses { get; set; }
-
+        
         [NotMapped]
-        public string FullName
-        {
-            get
-            {
-                return
-                    string.Format("{0} {0} {0} {0} {0}",
-                    FirstName, SecondName, LastName, SecondLastName, Suffix);
-            }
-        }
-
+        public string FullName => string.Format("{0} {1} {2} {3} {4} {5}",
+                       Prefix, FirstName, SecondName, LastName, SecondLastName, Suffix);
     }
 }
