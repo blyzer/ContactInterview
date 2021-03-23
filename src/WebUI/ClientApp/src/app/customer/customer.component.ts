@@ -12,16 +12,6 @@ export class CustomerComponent {
 
     debug = false;
     vm = PaginatedListOfCustomerDto;
-    selected: CustomerDto;
-
-    newListEditor: any = {};
-    listOptionsEditor: any = {};
-    DetailsEditor: any = {};
-
-    newListModalRef: BsModalRef;
-    listOptionsModalRef: BsModalRef;
-    deleteListModalRef: BsModalRef;
-    DetailsModalRef: BsModalRef;
 
     faPlus = faPlus;
     faEllipsisH = faEllipsisH;
@@ -82,8 +72,6 @@ export class CustomerComponent {
                     error => console.error(error)
                 );
         }
-
-        this.selected = null;
 
         if (isNew && pressedEnter) {
             this.add();
