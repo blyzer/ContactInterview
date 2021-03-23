@@ -245,7 +245,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/CreateCustomerCommand2"
+                "$ref": "#/components/schemas/CreateTodoItemCommand"
               }
             }
           },
