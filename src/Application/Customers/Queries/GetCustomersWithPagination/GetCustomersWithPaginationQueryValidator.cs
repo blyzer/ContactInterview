@@ -6,10 +6,6 @@ namespace ContactInterview.Application.Customers.Queries.GetCustomersWithPaginat
     {
         public GetCustomersWithPaginationQueryValidator()
         {
-            RuleFor(x => x.FullName)
-                .NotNull()
-                .NotEmpty().WithMessage("Names are required.");
-
             RuleFor(x => x.PageNumber)
                 .GreaterThanOrEqualTo(1).WithMessage("PageNumber at least greater than or equal to 1.");
 
